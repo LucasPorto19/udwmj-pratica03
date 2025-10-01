@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prática 03 - Exercício 04: Área do Círculo</title>
+
+  <!-- liga o CSS -->
+  <link rel="stylesheet" href="pratica03exercicio04.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Calculadora de Área do Círculo</h1>
+
+    <!-- usamos form para facilitar o submit e a validação nativa -->
+    <form id="form-area">
+      <label for="raio">Raio (em unidades):</label>
+      <input 
+        id="raio" 
+        name="raio" 
+        type="number" 
+        step="any" 
+        min="0" 
+        placeholder="Ex.: 3.5" 
+        required
+      >
+      <div class="acoes">
+        <button type="submit">Calcular área</button>
+        <button type="reset" class="secundario">Limpar</button>
+      </div>
+    </form>
+
+    <p class="dica">
+      Fórmula: A = π * raio² (π ≈ <span id="pi-value"></span>)
+    </p>
+
+    <!-- aria-live para leitores de tela anunciarem o resultado -->
+    <output id="resultado" aria-live="polite"></output>
+  </main>
+
+  <!-- liga o JS (sempre depois do HTML para garantir que os elementos existem) -->
+  <script src="pratica03exercicio04.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prática 03 – Exercício 05: Volume da Esfera</title>
+  <link rel="stylesheet" href="pratica03exercicio05.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Calculadora de Volume da Esfera</h1>
+
+    <form id="form-volume">
+      <label for="raio">Raio (em unidades):</label>
+      <input
+        id="raio"
+        name="raio"
+        type="number"
+        step="any"
+        min="0"
+        placeholder="Ex.: 3.5"
+        required
+      >
+      <div class="acoes">
+        <button type="submit">Calcular volume</button>
+        <button type="reset" class="secundario">Limpar</button>
+      </div>
+    </form>
+
+    <p class="dica">
+      Fórmula: V = (4/3) × π × raio³ (π ≈ <span id="pi-value"></span>)
+    </p>
+
+    <output id="resultado" aria-live="polite"></output>
+  </main>
+
+  <script src="pratica03exercicio05.js"></script>
+</body>
+</html>

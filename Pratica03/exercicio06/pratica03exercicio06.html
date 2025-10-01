@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prática 03 – Exercício 06: Juros Compostos</title>
+  <link rel="stylesheet" href="pratica03exercicio06.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Calculadora de Juros Compostos</h1>
+
+    <form id="form-juros">
+      <label for="capital">Capital inicial (C):</label>
+      <input
+        id="capital"
+        name="capital"
+        type="number"
+        step="any"
+        min="0"
+        placeholder="Ex.: 1000,00"
+        required
+      >
+
+      <label for="taxa">Taxa por período (i) em %:</label>
+      <input
+        id="taxa"
+        name="taxa"
+        type="number"
+        step="any"
+        min="0"
+        placeholder="Ex.: 1 (para 1%)"
+        required
+      >
+
+      <div class="linha">
+        <div class="campo-pequeno">
+          <label for="tempo">Tempo (t):</label>
+          <input
+            id="tempo"
+            name="tempo"
+            type="number"
+            step="1"
+            min="0"
+            placeholder="Ex.: 12"
+            required
+          >
+        </div>
+
+        <div class="campo-pequeno">
+          <label for="unidade">Unidade:</label>
+          <select id="unidade" name="unidade">
+            <option value="meses">mês(es)</option>
+            <option value="anos">ano(s)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="acoes">
+        <button type="submit">Calcular montante</button>
+        <button type="reset" class="secundario">Limpar</button>
+      </div>
+    </form>
+
+    <p class="dica">
+      Fórmula: M = C × (1 + i)<sup>t</sup>. Use taxa e tempo na <strong>mesma unidade</strong>.
+    </p>
+
+    <output id="resultado" aria-live="polite"></output>
+  </main>
+
+  <script src="pratica03exercicio06.js"></script>
+</body>
+</html>
